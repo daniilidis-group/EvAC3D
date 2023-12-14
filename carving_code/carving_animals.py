@@ -17,7 +17,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--label_file', type=str, help='File to load')
 parser.add_argument('--event_file', type=str, help='File to load')
-parser.add_argument('--mesh', type=str, help='Mesh to load')
+# parser.add_argument('--mesh', type=str, help='Mesh to load')
 parser.add_argument('--result_file', type=str, help="Where to save file")
 args = parser.parse_args()
 
@@ -82,8 +82,8 @@ elif "hdf5" in args.label_file:
 else:
     raise NotImplementedError()
 
-mesh = o3d.io.read_triangle_mesh(args.mesh)
-mesh.compute_vertex_normals()
+# mesh = o3d.io.read_triangle_mesh(args.mesh)
+# mesh.compute_vertex_normals()
 
 camera.set_intrinsics(K, dist_coeffs)
 

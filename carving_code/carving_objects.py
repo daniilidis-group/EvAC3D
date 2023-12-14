@@ -15,7 +15,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', type=str, help='File to load')
-parser.add_argument('--original_frame', type=str, help='original camera frame', default="prophesee")
+# parser.add_argument('--original_frame', type=str, help='original camera frame', default="prophesee")
 parser.add_argument('--calib', type=str, help='Calibration File', default="/home/ken/datasets/EventRecon/camchain-recons.yaml")
 args = parser.parse_args()
 
