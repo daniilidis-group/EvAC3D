@@ -1,21 +1,13 @@
-#from o3d_voxel_example import open3d_tutorial as o3dtut
 import open3d as o3d
 import numpy as np
 import os
-import mcubes
 import torch
-
-import pdb
-
-from voxel_carving import ContinuousCamera, Volume, normalize, transform_rays, invert_transform, EnvironmentFileEvent
-
-import matplotlib.pyplot as plt
+from voxel_carving import ContinuousCamera, Volume, EnvironmentFileEvent
 import time
 import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', type=str, help='File to load')
-# parser.add_argument('--original_frame', type=str, help='original camera frame', default="prophesee")
 parser.add_argument('--calib', type=str, help='Calibration File', default="/home/ken/datasets/EventRecon/camchain-recons.yaml")
 args = parser.parse_args()
 

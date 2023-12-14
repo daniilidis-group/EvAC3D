@@ -2,22 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import open3d as o3d
-from chamferdist import ChamferDistance
 import torch
-import pdb
-import mcubes
-
 from pykdtree.kdtree import KDTree
-from skimage import exposure, util, segmentation, filters
-
-from voxel_carving import Volume, preprocess_mesh, doICP, get_figure_image
+from voxel_carving import Volume, doICP, get_figure_image
 import ruamel.yaml as yaml
 import open3d as o3d
-import pytorch3d
 from pytorch3d.structures import Meshes
-# from pytorch3d.loss import mesh_laplacian_smoothing
 
-from scipy import signal, ndimage
+from scipy import ndimage
 from tqdm import tqdm
 
 def remove_keymap_conflicts(new_keys_set):

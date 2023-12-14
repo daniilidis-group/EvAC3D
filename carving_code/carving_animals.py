@@ -1,16 +1,9 @@
-#from o3d_voxel_example import open3d_tutorial as o3dtut
 import open3d as o3d
 import numpy as np
 import os
-import mcubes
 import torch
 import h5py
-
-import pdb
-
 from voxel_carving import ContinuousCamera, Volume, normalize, transform_rays, invert_transform, EnvironmentFileEvent
-
-import matplotlib.pyplot as plt
 import time
 import argparse
 
