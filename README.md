@@ -23,10 +23,15 @@ The `learning` folder has the poses, events, masks that we used for training and
 
 ## How to use our data for carving
 
+### Object carving with network prediction
 After the network has been trained, we save them into an intermediate format for carving. An example script for running such inference is in `training_code/predict_events.py`. The script saves events, predicted labels, cameras poses, calibration and camera timestamps into a .pkl file. This file is then used as the argument to `--file` in the carving code.
 
 To run the carving code, simply run:
 
 `python --file [prediction pickle file] --calib [calibration file path]`
 
-You can run `evaluation.py` to convert soft occupancy to meshes. Some default paramters are given for two example objects. 
+### Real-world animal carving
+In [this folder](https://drive.google.com/drive/u/1/folders/1h2mvxZbQSwfjWQobNtU5eo3FagievBtS), we provide examples labels and configurations for running `carving_animals.py`. This script generates the same `.npz` file format as `carving_objects.py`, which can be used for mesh extraction.
+
+### Evaluation
+Given the carved volumes saved as npz files, You can run `evaluation.py` to convert soft occupancy to meshes. Some default paramters are given for two example objects.
