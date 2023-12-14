@@ -3,8 +3,11 @@ import numpy as np
 import torch
 import open3d as o3d
 import torch
+
 from pykdtree.kdtree import KDTree
-from voxel_carving import Volume, doICP, get_figure_image
+from skimage import filters
+
+from voxel_carving import Volume,  doICP, get_figure_image
 import ruamel.yaml as yaml
 import open3d as o3d
 from pytorch3d.structures import Meshes
